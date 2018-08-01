@@ -20,5 +20,34 @@ public class OrderConfirmDialogFragment extends DialogFragment {
         //ダイアログオブジェクトを生成し、リターン
         AlertDialog dialog = builder.create();
         return dialog;
+        }
+}
+
+private class DialogButtonClickListener implements DialogInterface.OnClickListener {
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        //トーストメッセージ用文字列変数を用意。
+        String msg = "";
+        //タップされたアクションボタンで分岐
+        switch(shich) {
+        //Positive Buttonならば
+            case DialogInterface.BUTTON_POSITIVE:
+                //注意用のメッセージ
+                msg = getString(R.string.dialog_ok_toast);
+                break;
+        //Negative Buttonならば
+            case DialogInterface.BUTTON_NEGATIVE:
+                //キャンセル用のメッセージを格納。
+                msg = getString(R.string.dialog_ng_toast);
+                break;
+        //Neutral Buttonならば
+            case DialogInterface.BUTTON_NEUTRAL:
+                //問い合わせ用のメッセージを格納。
+                msg = getString(R.string.dialog_nu_toast);
+                break;
+        }
+        //トーストの表示
+        Toast.makeTest(getActivity(), msg, Toast.LENGTH_LONG).show()
+                
     }
 }
