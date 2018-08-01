@@ -48,6 +48,6 @@ private class DialogButtonClickListener implements DialogInterface.OnClickListen
         }
         //トーストの表示
         Toast.makeTest(getActivity(), msg, Toast.LENGTH_LONG).show()
-                
+
     }
 }

@@ -29,5 +29,6 @@ public class ListViewSample2Activity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(ListViewSample2Activity.this, android.R.layout.simple_list_item_1, menuList)
 
         lvMenu.setAdapter(adapter);
+        
     }
 }
